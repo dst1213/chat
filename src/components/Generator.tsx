@@ -123,6 +123,10 @@ export default function () {
     if (!inputValue) {
       return
     }
+    // passwords
+    localStorage.setItem("setting", JSON.stringify(setting()))
+    if (setting().siteKey != "20031213")
+      console.alert("密码错误")
     // @ts-ignore
     if (window?.umami) umami.trackEvent("chat_generate")
     setInputContent("")
