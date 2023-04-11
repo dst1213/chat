@@ -127,7 +127,7 @@ export default function () {
     localStorage.setItem("setting", JSON.stringify(setting()))
     if (setting().siteKey != "20031213")
       setCurrentAssistantMessage("使用前，请输入正确的网站密码！")
-      console.log("使用前，请输入正确的网站密码！")
+      return
     // @ts-ignore
     if (window?.umami) umami.trackEvent("chat_generate")
     setInputContent("")
