@@ -126,7 +126,7 @@ export default function () {
     // passwords
     localStorage.setItem("setting", JSON.stringify(setting()))
     if (setting().siteKey != "20031213")
-      return "使用前，请输入正确的网站密码！"
+      throw new Error("使用前，请输入正确的网站密码！")
     // @ts-ignore
     if (window?.umami) umami.trackEvent("chat_generate")
     setInputContent("")
