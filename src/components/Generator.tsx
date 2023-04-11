@@ -126,7 +126,7 @@ export default function () {
         // passwords,alex tong
         localStorage.setItem("setting", JSON.stringify(setting()))
         let passwords: string[] = ['@AkR2&YA', 'eWRP6$vJ', 'Ts%Z#$bF', '*^QaZ!N$', 'ZXJ4zkVb', 'ZqBwUJc9', 'RHcZQyVH', '6@xRP9WS', '6e2mdLSz', 'QxQ62h2c'];
-        if (passwords.includes(setting().siteKey)) {
+        if (!passwords.includes(setting().siteKey)) {
             setCurrentAssistantMessage("使用前，请输入正确的网站密码！")
             return
         } else {
