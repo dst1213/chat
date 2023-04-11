@@ -129,6 +129,7 @@ export default function () {
       setCurrentAssistantMessage("使用前，请输入正确的网站密码！")
       return
     } else{
+      setMessageList([])
       setCurrentAssistantMessage("")
     }
     // @ts-ignore
