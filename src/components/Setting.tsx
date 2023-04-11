@@ -18,7 +18,7 @@ export default function Setting(props: {
   return (
     <div class="text-sm text-slate mb-2">
       <Show when={shown()}>
-         <SettingItem icon="i-ri:lock-password-line" label="网站密码">
+         <SettingItem icon="i-carbon:password" label="网站密码">
           <input
             type="password"
             value={props.setting().siteKey}
